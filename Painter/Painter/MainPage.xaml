@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Painter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Painter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="650" Height="600" PointerMoved="Page_PointerMoved" PointerPressed="Page_PointerPressed" PointerReleased="Page_PointerReleased">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Name="DrawingArea" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Background="White"/>
+        <TextBlock x:Name="textBlock1" FontSize="25"  HorizontalAlignment="Left"  Padding="0" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Brush" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock2" FontSize="25"  HorizontalAlignment="Left"  Padding="0" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Background" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock3" FontSize="25"  HorizontalAlignment="Left"  Padding="0" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top"/>
+        <Button x:Name="button1"  FontSize="25" Content="Clear" Grid.Column="5" HorizontalAlignment="Left" Height="56" Margin="-3" Grid.Row="1" VerticalAlignment="Top" Width="106" Click="button1_Click" />
+
+        <TextBlock x:Name="textBlock4" FontSize="25"  HorizontalAlignment="Center"  Padding="0" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="5" VerticalAlignment="Center" Tapped="Size_Tapped" />
+        <TextBlock x:Name="textBlock5" FontSize="25"  HorizontalAlignment="Center"  Padding="0" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" Text="10" VerticalAlignment="Center" Tapped="Size_Tapped"/>
+        <TextBlock x:Name="textBlock6" FontSize="25"  HorizontalAlignment="Center"  Padding="0" Grid.Row="3" Grid.Column="3" TextWrapping="Wrap" Text="15" VerticalAlignment="Center" Tapped="Size_Tapped"/>
+        <TextBlock x:Name="textBlock7" FontSize="25"  HorizontalAlignment="Center"  Padding="0" Grid.Row="3" Grid.Column="4" TextWrapping="Wrap" Text="25" VerticalAlignment="Center" Tapped="Size_Tapped"/>
+
+
+        <Button x:Name="btnEraser"  FontSize="25" Content="Erase" Grid.Column="5" HorizontalAlignment="Left" Height="56" Margin="-3" Grid.Row="3" VerticalAlignment="Top" Width="106" Tapped="btnEraser_Tapped"/>
+        <Rectangle Name="Rec1" Grid.Column="1" Fill="MediumVioletRed" HorizontalAlignment="Left" Height="50" Grid.Row="1"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Rectangle_Tapped"/>
+        <Rectangle Name="Rec2" Grid.Column="2" Fill="Aquamarine" HorizontalAlignment="Left" Height="50" Grid.Row="1"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Rectangle_Tapped"/>
+        <Rectangle Name="Rec3" Grid.Column="3" Fill="DarkGray" HorizontalAlignment="Left" Height="50" Grid.Row="1"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Rectangle_Tapped"/>
+        <Rectangle Name="Rec4" Grid.Column="4" Fill="Gold" HorizontalAlignment="Left" Height="50" Grid.Row="1"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Rectangle_Tapped"/>
+
+        <Rectangle Name="Rec5" Grid.Column="1" Fill="AliceBlue" HorizontalAlignment="Left" Height="50" Grid.Row="2"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Background_Tapped"/>
+        <Rectangle Name="Rec6" Grid.Column="2" Fill="BurlyWood" HorizontalAlignment="Left" Height="50" Grid.Row="2"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Background_Tapped"/>
+        <Rectangle Name="Rec7" Grid.Column="3" Fill="CadetBlue" HorizontalAlignment="Left" Height="50" Grid.Row="2"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Background_Tapped"/>
+        <Rectangle Name="Rec8" Grid.Column="4" Fill="HotPink" HorizontalAlignment="Left" Height="50" Grid.Row="2"  Stroke="Black" VerticalAlignment="Top" Width="100" Tapped="Background_Tapped"/>
+
+
+    </Grid>
+</Page>
